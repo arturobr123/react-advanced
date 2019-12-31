@@ -6,6 +6,7 @@ import { List, Item } from './styles'
 
 
 function useCategoriesData(){
+  console.log("useCategoriesData")
   const [categories, setCategories] = useState([])
   const [loading, setLoading] = useState(false)
 
@@ -13,7 +14,7 @@ function useCategoriesData(){
     setLoading(true)
 
     const getCategories = async () => {
-      const response = await fetch('https://petgram-server-arturo.arturo123leyenda.now.sh/categories')
+      const response = await fetch('https://petgram-server.aryrosvall.now.sh/categories')
       const res = await response.json()
       setCategories(res)
       setLoading(false)
